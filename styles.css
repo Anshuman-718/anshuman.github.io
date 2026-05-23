@@ -1616,31 +1616,3 @@ a:hover { color: #67e8f9; }
   z-index: 2;
 }
 
-/* PROFILE PICTURE CONTAINER */
-.profile-picture {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative;
-
-  /* Faded circular border */
-  border: 4px solid rgba(255, 255, 255, 0.25);
-
-  /* Soft glowing faded effect */
-  box-shadow:
-    0 0 20px rgba(255, 255, 255, 0.15),
-    0 0 40px rgba(255, 255, 255, 0.08);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* IMAGE */
-.profile-picture img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
