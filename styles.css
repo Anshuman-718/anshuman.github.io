@@ -1616,87 +1616,31 @@ a:hover { color: #67e8f9; }
   z-index: 2;
 }
 
-.profile-clean {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* PERFECT CIRCLE ONLY */
-.profile-frame {
-  width: 380px;
-  height: 380px;
+/* PROFILE PICTURE CONTAINER */
+.profile-picture {
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   overflow: hidden;
   position: relative;
 
-  /* Simple circular border */
-  border: 4px solid rgba(0, 212, 255, 0.6);
+  /* Faded circular border */
+  border: 4px solid rgba(255, 255, 255, 0.25);
 
-  /* Clean glow */
+  /* Soft glowing faded effect */
   box-shadow:
-    0 0 25px rgba(0,212,255,0.25),
-    0 0 50px rgba(111,134,255,0.15);
+    0 0 20px rgba(255, 255, 255, 0.15),
+    0 0 40px rgba(255, 255, 255, 0.08);
 
-  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* REMOVE ALL EXTRA SHAPES */
-.profile-frame::before,
-.profile-frame::after {
-  display: none;
-}
-
-/* PROFILE IMAGE */
-.profile-img {
+/* IMAGE */
+.profile-picture img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-
-  transition: transform 0.35s ease;
-}
-
-/* Hover effect */
-.profile-frame:hover .profile-img {
-  transform: scale(1.03);
-}
-
-/* NAME */
-.profile-info-card {
-  margin-top: 18px;
-  text-align: center;
-}
-
-/* NAME TEXT */
-.profile-info-card h3 {
-  margin: 0;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 1px;
-  font-family: 'Syne', sans-serif;
-}
-
-/* REMOVE ANY EXTRA DESIGN */
-.profile-info-card::after {
-  display: none;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .profile-frame {
-    width: 280px;
-    height: 280px;
-  }
-
-  .profile-info-card h3 {
-    font-size: 1.5rem;
-  }
 }
