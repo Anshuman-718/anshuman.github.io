@@ -1639,20 +1639,9 @@ a:hover { color: #67e8f9; }
 }
 
 /* OUTER GLOW RING */
-.profile-frame::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-
-  background:
-    linear-gradient(
-      135deg,
-      #18d7ff 0%,
-      #5f86ff 40%,
-      #9d5cff 70%,
-      #ff4fd8 100%
-    );
+.profile-info-card::after {
+  display: none;
+}
 
   box-shadow:
     0 0 25px rgba(24,215,255,0.28),
