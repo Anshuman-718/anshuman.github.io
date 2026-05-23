@@ -1616,50 +1616,62 @@ a:hover { color: #67e8f9; }
   align-items: center;
 }
 
-/* Better background design behind image */
+/* Premium circular frame */
 .profile-frame {
   position: relative;
-  padding: 12px;
-  border-radius: 36px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  padding: 10px;
+
   background:
     linear-gradient(
       135deg,
-      rgba(0,212,255,0.18),
-      rgba(128,90,213,0.12)
+      rgba(0, 212, 255, 0.35),
+      rgba(128, 90, 213, 0.25)
     );
 
   box-shadow:
-    0 25px 60px rgba(0,0,0,0.35),
-    0 0 50px rgba(0,212,255,0.12);
+    0 0 40px rgba(0,212,255,0.15),
+    0 20px 60px rgba(0,0,0,0.35);
 
-  backdrop-filter: blur(18px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Profile Image */
-.profile-img {
-  width: 340px;
-  height: 340px;
-  object-fit: cover;
-  border-radius: 28px;
-  display: block;
+/* subtle glowing ring */
+.profile-frame::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px solid rgba(0,212,255,0.18);
+}
 
-  border: 2px solid rgba(255,255,255,0.08);
+/* circular image */
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.08);
 
   transition: transform 0.4s ease;
 }
 
 .profile-img:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
-/* Name only */
+/* name */
 .profile-info-card {
-  margin-top: 16px;
+  margin-top: 18px;
   text-align: center;
 }
 
 .profile-info-card h3 {
-  color: white;
+  color: #fff;
   font-size: 1.6rem;
   font-weight: 700;
   margin: 0;
