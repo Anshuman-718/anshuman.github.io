@@ -1592,9 +1592,15 @@ a:hover { color: #67e8f9; }
   border-radius: 20px;
   max-height: 420px;
   object-fit: cover;
+  background: #000;
 }
 
-/* TOP BADGE */
+/* Ensure controls show */
+.project-video::-webkit-media-controls {
+  display: flex !important;
+}
+
+/* VIDEO LABEL */
 .video-badge {
   position: absolute;
   top: 14px;
@@ -1607,6 +1613,7 @@ a:hover { color: #67e8f9; }
   font-weight: 600;
   backdrop-filter: blur(10px);
   pointer-events: none;
+  z-index: 2;
 }
 
 
