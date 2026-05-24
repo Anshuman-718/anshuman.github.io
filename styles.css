@@ -1832,3 +1832,34 @@ a:hover { color: #67e8f9; }
   box-shadow:
     0 0 22px rgba(0,170,255,0.20);
 }
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.why-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.why-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.why-card p {
+  opacity: 0.8;
+  line-height: 1.5;
+}
