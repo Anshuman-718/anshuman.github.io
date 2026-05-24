@@ -1617,96 +1617,123 @@ a:hover { color: #67e8f9; }
 }
 
 
-/* ===== HERO LAYOUT FIX (LEFT TEXT + RIGHT IMAGE) ===== */
+/* ===================================================
+   HERO LAYOUT (TEXT LEFT + PROFILE RIGHT)
+=================================================== */
 .hero-split {
   display: flex;
-  align-items: flex-start; /* shift content upward */
   justify-content: space-between;
-  gap: 3rem;
+  align-items: flex-start;
+  gap: 4rem;
   flex-wrap: wrap;
   padding-top: 2rem;
 }
 
-/* LEFT TEXT stays untouched */
+/* LEFT SIDE TEXT */
 .hero-content {
   flex: 1;
   min-width: 320px;
+  max-width: 700px;
 }
 
-/* RIGHT PROFILE AREA */
+/* ===================================================
+   RIGHT PROFILE SECTION
+=================================================== */
 .hero-profile {
   flex: 0.8;
+  min-width: 320px;
+
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  min-width: 280px;
 
-  /* move profile upward */
-  margin-top: -20px;
+  /* shift upward */
+  margin-top: -50px;
 }
 
-/* PROFILE CIRCLE */
+/* ===================================================
+   PROFILE IMAGE CONTAINER
+=================================================== */
 .profile-ring {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  padding: 3px; /* reduced border thickness */
   position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
 
   display: flex;
-  align-items: center;
   justify-content: center;
-
-  /* dark theme inside */
-  background: #111827; /* dark background matching portfolio */
+  align-items: center;
 }
 
-/* ROTATING NEON RING */
+/* ===================================================
+   ROTATING DARK NEON BLUE RING
+=================================================== */
 .profile-ring::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: -5px;
   border-radius: 50%;
 
   background: conic-gradient(
-    #00f5ff,
-    #7f5af0,
-    #2cb67d,
-    #00f5ff
+    from 0deg,
+    #021526,
+    #003cff,
+    #00aaff,
+    #005eff,
+    #021526
   );
 
-  /* thinner ring */
-  padding: 2px;
+  /* thinner border */
+  padding: 4px;
 
+  /* creates hollow ring */
   -webkit-mask:
-    radial-gradient(farthest-side,
-    transparent calc(100% - 3px),
-    black 0);
+    radial-gradient(
+      farthest-side,
+      transparent calc(100% - 4px),
+      black 0
+    );
 
   mask:
-    radial-gradient(farthest-side,
-    transparent calc(100% - 3px),
-    black 0);
+    radial-gradient(
+      farthest-side,
+      transparent calc(100% - 4px),
+      black 0
+    );
 
-  animation: spinRing 5s linear infinite;
-  filter: blur(0.5px);
+  /* smooth rotation */
+  animation: rotateRing 6s linear infinite;
+
+  /* neon glow */
+  box-shadow:
+    0 0 15px rgba(0, 120, 255, 0.45),
+    0 0 35px rgba(0, 170, 255, 0.25),
+    0 0 60px rgba(0, 80, 255, 0.15);
+
+  z-index: 0;
 }
 
-/* IMAGE */
+/* ===================================================
+   PROFILE IMAGE
+=================================================== */
 .profile-ring img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
   object-fit: cover;
-  position: relative;
-  z-index: 1;
 
-  /* dark inner border */
-  border: 2px solid rgba(255,255,255,0.08);
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+
+  /* remove any inner background */
+  background: transparent;
+  border: none;
 }
 
-/* ROTATION */
-@keyframes spinRing {
+/* ===================================================
+   RING ROTATION ANIMATION
+=================================================== */
+@keyframes rotateRing {
   from {
     transform: rotate(0deg);
   }
@@ -1715,20 +1742,28 @@ a:hover { color: #67e8f9; }
   }
 }
 
-/* MOBILE FIX */
-@media (max-width: 768px) {
+/* ===================================================
+   RESPONSIVE DESIGN
+=================================================== */
+@media (max-width: 992px) {
   .hero-split {
     flex-direction: column;
-    text-align: center;
     align-items: center;
+    text-align: center;
   }
 
   .hero-profile {
-    margin-top: 1rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-ring {
+    width: 230px;
+    height: 230px;
   }
 
-  .profile-ring {
-    width: 180px;
-    height: 180px;
+  .hero-profile {
+    min-width: auto;
   }
 }
