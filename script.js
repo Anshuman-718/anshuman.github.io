@@ -242,3 +242,42 @@
     if (e.key === "ArrowRight") stepLightbox(1);
   });
 })();
+// ==========================================
+// IMAGE FULLSCREEN ZOOM
+// ==========================================
+document.addEventListener("click", function (e) {
+
+  const image = e.target.closest(".zoomable-image");
+
+  if (!image) return;
+
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxCap = document.getElementById("lightbox-cap");
+
+  lightbox.hidden = false;
+  lightbox.setAttribute("aria-hidden", "false");
+
+  lightboxImg.src = image.src;
+  lightboxCap.textContent = image.alt || "";
+});
+
+// CLOSE LIGHTBOX
+document.querySelector(".lightbox-close")
+?.addEventListener("click", () => {
+
+  const lightbox = document.getElementById("lightbox");
+
+  lightbox.hidden = true;
+  lightbox.setAttribute("aria-hidden", "true");
+});
+
+// CLOSE ON BACKGROUND CLICK
+document.getElementById("lightbox")
+?.addEventListener("click", function (e) {
+
+  if (e.target.id === "lightbox") {
+    this.hidden = true;
+    this.setAttribute("aria-hidden", "true");
+  }
+});
