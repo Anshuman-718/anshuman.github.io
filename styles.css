@@ -1648,7 +1648,7 @@ a:hover { color: #67e8f9; }
   align-items: flex-start;
 
   /* shift upward */
-  margin-top: -50px;
+  margin-top: 20px;
 }
 
 /* ===================================================
@@ -1766,4 +1766,35 @@ a:hover { color: #67e8f9; }
   .hero-profile {
     min-width: auto;
   }
+}
+
+/* PROFILE CONTAINER */
+.hero-profile {
+  flex: 0.8;
+  min-width: 320px;
+
+  display: flex;
+  flex-direction: column; /* stack image + name */
+  align-items: center;
+
+  margin-top: 20px;
+}
+
+/* NAME BELOW IMAGE */
+.profile-name {
+  margin-top: 15px;
+  margin-bottom: 0;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Syne", sans-serif;
+
+  color: #dbeafe;
+  text-align: center;
+
+  letter-spacing: 1px;
+
+  text-shadow:
+    0 0 8px rgba(0,170,255,0.3),
+    0 0 16px rgba(0,80,255,0.15);
 }
