@@ -1657,8 +1657,8 @@ a:hover { color: #67e8f9; }
 =================================================== */
 .profile-ring {
   position: relative;
-  width: 320px;
-  height: 320px;
+  width: 380px;
+  height: 380px;
   border-radius: 50%;
 
   display: flex;
@@ -1676,16 +1676,15 @@ a:hover { color: #67e8f9; }
   border-radius: 50%;
 
   /* elegant border */
-  border: 2px solid rgba(100, 180, 255, 0.18);
-
+  border: 3px solid rgba(80, 180, 255, 0.45);
   /* premium faded glow matching dark background */
   background:
     radial-gradient(circle at 30% 30%,
-      rgba(0, 183, 255, 0.14),
+      rgba(0, 183, 255, 0.28),
       transparent 45%),
 
     radial-gradient(circle at 70% 70%,
-      rgba(125, 90, 255, 0.10),
+      rgba(125, 90, 255, 0.22),
       transparent 50%),
 
     radial-gradient(circle,
@@ -1695,12 +1694,12 @@ a:hover { color: #67e8f9; }
   filter: blur(1px);
 
   box-shadow:
-    0 0 12px rgba(0, 183, 255, 0.08),
-    0 0 22px rgba(0, 183, 255, 0.06),
-    0 0 35px rgba(125, 90, 255, 0.05),
-    inset 0 0 8px rgba(255,255,255,0.02);
-
-  z-index: 0;
+    box-shadow:
+    0 0 15px rgba(0, 183, 255, 0.22),
+    0 0 35px rgba(0, 183, 255, 0.18),
+    0 0 60px rgba(125, 90, 255, 0.14),
+    inset 0 0 15px rgba(255,255,255,0.04);
+    z-index: 0;
 }
 
 /* ===================================================
