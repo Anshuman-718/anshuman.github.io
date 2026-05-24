@@ -1588,74 +1588,49 @@ a:hover { color: #67e8f9; }
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.08);
 
-  min-height: 280px;
-
   box-shadow:
     0 15px 35px rgba(0,0,0,0.25);
-
-  z-index: 1;
 }
 
-/* ===================================================
-   VIDEO PLAYER
-=================================================== */
+/* VIDEO */
 .project-video {
   width: 100%;
   display: block;
 
   border-radius: 22px;
   max-height: 420px;
-  min-height: 280px;
 
   object-fit: contain;
   background: #000;
-
-  position: relative;
-  z-index: 1;
-}
-
-/* SHOW VIDEO CONTROLS */
-.project-video::-webkit-media-controls {
-  display: flex !important;
 }
 
 /* ===================================================
-   VIDEO BADGE (FIXED)
+   PLAY BUTTON
 =================================================== */
-.video-badge {
+.video-play-btn {
   position: absolute;
   top: 18px;
   left: 18px;
 
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  z-index: 9999;
 
-  background: rgba(8, 15, 30, 0.78);
-  color: #ffffff;
+  background: rgba(10,15,30,0.82);
+  color: #fff;
 
-  padding: 10px 16px;
+  border: 1px solid rgba(0,170,255,0.25);
   border-radius: 999px;
+
+  padding: 10px 18px;
 
   font-size: 0.9rem;
   font-weight: 600;
 
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
-  border: 1px solid rgba(0,170,255,0.18);
 
   box-shadow:
-    0 0 12px rgba(0,170,255,0.12),
-    0 0 24px rgba(0,120,255,0.08);
+    0 0 12px rgba(0,170,255,0.15);
 
-  /* IMPORTANT FIX */
-  z-index: 9999;
-
-  opacity: 1;
-  visibility: visible;
-
-  pointer-events: none;
+  cursor: default;
 }
 
 /* ===================================================
