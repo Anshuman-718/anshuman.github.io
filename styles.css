@@ -1580,6 +1580,10 @@ a:hover { color: #67e8f9; }
 .project-video-wrapper {
   width: 100%;
   margin: 1.5rem 0;
+
+  position: relative;   /* ADD THIS */
+  overflow: hidden;
+  border-radius: 20px;
 }
 
 /* BADGE */
@@ -1644,7 +1648,7 @@ a:hover { color: #67e8f9; }
   box-shadow:
     0 0 12px rgba(0,170,255,0.15);
 
-  cursor: default;
+  cursor: pointer; /* change from default */
 }
 
 /* ===================================================
@@ -1819,7 +1823,7 @@ a:hover { color: #67e8f9; }
   width: 100%;
   height: 320px;
 
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 
   background: #000;
@@ -1841,7 +1845,7 @@ a:hover { color: #67e8f9; }
 .smart-home-image {
   width: 100%;
   height: 320px;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
@@ -1863,6 +1867,27 @@ a:hover { color: #67e8f9; }
   font-size: 0.92rem;
   font-weight: 600;
 }
+/* ==========================================
+   VIDEO TITLE
+========================================== */
+.video-title {
+  display: inline-block;
+
+  margin: 18px 0 12px;
+  padding: 10px 18px;
+
+  background: rgba(10,15,30,0.92);
+  color: white;
+
+  border-radius: 999px;
+  border: 1px solid rgba(0,170,255,0.25);
+
+  font-size: 0.92rem;
+  font-weight: 600;
+
+  box-shadow:
+    0 0 12px rgba(0,170,255,0.12);
+}
 
 /* ==========================================
    VIDEO SECTION
@@ -1870,17 +1895,26 @@ a:hover { color: #67e8f9; }
 .project-video-wrapper {
   width: 100%;
   border-radius: 20px;
-  overflow: hidden;
+
+  overflow: visible; /* changed */
 
   border: 1px solid rgba(255,255,255,0.08);
+
+  background: rgba(255,255,255,0.03);
+  padding: 10px;
 }
 
+/* VIDEO */
 .project-video {
   width: 100%;
-  max-height: 420px;
+  height: auto; /* important */
+
+  max-height: 500px; /* slightly bigger */
 
   display: block;
   background: #000;
 
-  object-fit: contain;
+  border-radius: 16px;
+
+  object-fit: scale-down; /* better than contain */
 }
