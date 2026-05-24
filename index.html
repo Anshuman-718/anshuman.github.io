@@ -137,9 +137,55 @@
   </div>
 </section>
 
+     <section id="why-hire-me" class="section section-alt">
+  <div class="container">
+    
+    <header class="section-head reveal">
+      <span class="section-tag">02 — Value</span>
+      <h2>Why Hire Me?</h2>
+    </header>
+
+    <div class="why-grid reveal">
+
+      <div class="why-card">
+        <h3>Hardware + Software Builder</h3>
+        <p>
+          I don’t just code or design circuits — I build complete embedded systems 
+          from PCB to firmware to real-world deployment.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h3>Real Project Experience</h3>
+        <p>
+          Hands-on experience with ESP32, STM32, Arduino, Raspberry Pi, and 
+          custom PCB design using EAGLE for real robotics and IoT systems.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h3>Problem Solver Mindset</h3>
+        <p>
+          I focus on debugging, optimization, and making systems reliable under 
+          real constraints like power, noise, and timing.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h3>Fast Learner & Team Player</h3>
+        <p>
+          Quickly adapt to new hardware/software stacks and collaborate effectively 
+          in technical teams and clubs like MARC.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+     
     <section id="work" class="section section-alt">
       <div class="container">
-        <header class="section-head reveal"><span class="section-tag">02 — Experience</span><h2>Where I’ve Worked &amp; Led</h2></header>
+        <header class="section-head reveal"><span class="section-tag">03 — Experience</span><h2>Where I’ve Worked &amp; Led</h2></header>
         <div class="exp-grid">
           <article class="exp-card reveal">
             <div class="exp-top"><span class="exp-date">August 2025 — March 2026</span><span class="exp-badge">Leadership</span></div>
@@ -166,7 +212,7 @@
     <section id="projects" class="section">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-tag">03 — Projects</span>
+          <span class="section-tag">04 — Projects</span>
           <h2>Hardware I’ve Designed &amp; Built</h2>
           <p>Tap a card to open full project details, schematics &amp; galleries.</p>
         </header>
@@ -217,7 +263,7 @@
           <button type="button" class="project-card" data-open-project="cozmoclench">
             <span class="card-num">04</span>
             <div class="card-media">
-              <img src="assets/LineFollower.png" alt="" loading="lazy" />
+              <img src="assets/CozmoClench.png" alt="" loading="lazy" />
               <div class="card-media-overlay"></div>
             </div>
             <div class="project-card-body">
@@ -234,7 +280,7 @@
     <section id="skills" class="section section-alt">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-tag">04 — Skills</span>
+          <span class="section-tag">05 — Skills</span>
           <h2>Technical Toolkit</h2>
           <p>Platforms &amp; tools I use to build embedded systems.</p>
         </header>
@@ -379,44 +425,49 @@
     </ul>
   </template>
 
-  <template id="tpl-smart-home">
+<template id="tpl-smart-home">
 
   <p class="modal-desc">
-    Developed a multi-node smart home automation system using 
-    3 Arduino UNO boards with HC-05 Bluetooth connectivity, 
-    integrating servo control, IR-based sensing, DHT11 
-    environmental monitoring, and adaptive LED brightness control.
+    Developed a <strong>multi-node embedded smart home automation system</strong> using 
+    3 Arduino UNO boards integrated with an HC-05 Bluetooth communication module.
+    The system follows a distributed control architecture where each node handles 
+    specific automation tasks for improved modularity and scalability.
   </p>
 
   <!-- SMART HOME IMAGE -->
   <div class="smart-home-image-wrapper">
     <img 
-  src="assets/SmartHome.png"
-  alt="Smart Home Automation"
-  class="smart-home-image zoomable-image"
->
+      src="assets/SmartHomeAutomation.png"
+      alt="Smart Home Automation"
+      class="smart-home-image zoomable-image"
+    >
   </div>
 
   <!-- VIDEO LINK BUTTON -->
-<div class="video-link-wrapper">
-
-  <a
-    href="https://anshuman-718.github.io/anshuman.github.io/assets/smart-home-automation.mp4"
-    target="_blank"
-    class="video-link-btn"
-  >
-    ▶ Watch Smart Home Demo
-  </a>
-
-</div>
+  <div class="video-link-wrapper">
+    <a
+      href="https://anshuman-718.github.io/anshuman.github.io/assets/smart-home-automation.mp4"
+      target="_blank"
+      class="video-link-btn"
+    >
+      ▶ Watch System Demo
+    </a>
+  </div>
 
   <ul class="modal-points">
-    <li>Designed a smart home automation system using 3 Arduino UNO boards for distributed device control.</li>
-    <li>Implemented wireless communication using the HC-05 Bluetooth module for remote appliance interaction.</li>
-    <li>Integrated servo motors for automated mechanical control of home devices.</li>
-    <li>Used IR sensors for motion/object detection to enable smart automation features.</li>
-    <li>Implemented adaptive LED brightness control based on environmental conditions using the DHT11 sensor.</li>
-    <li>Developed embedded control logic in C++ for real-time sensor monitoring and automated responses.</li>
+    <li>Designed a distributed embedded system using 3 Arduino UNO boards for independent and coordinated device control.</li>
+    
+    <li>Implemented HC-05 Bluetooth-based wireless communication enabling remote command execution and inter-node data exchange.</li>
+    
+    <li>Developed servo motor control modules for automated mechanical operations such as switching and actuation.</li>
+    
+    <li>Integrated IR sensors for real-time motion and object detection to enable intelligent automation responses.</li>
+    
+    <li>Implemented environmental monitoring using DHT11 sensor for temperature and humidity-based decision making.</li>
+    
+    <li>Designed adaptive LED control logic based on ambient environmental conditions for energy-efficient operation.</li>
+    
+    <li>Programmed embedded firmware in C/C++ for real-time sensor processing, event handling, and automation logic execution.</li>
   </ul>
 
   <a class="btn btn-primary modal-link"
