@@ -1648,7 +1648,7 @@ a:hover { color: #67e8f9; }
   align-items: flex-start;
 
   /* shift upward */
-  margin-top: 20px;
+  margin-top: 90px;
 }
 
 /* ===================================================
@@ -1668,6 +1668,7 @@ a:hover { color: #67e8f9; }
 /* ===================================================
    ROTATING DARK NEON BLUE RING
 =================================================== */
+/* NORMAL DARK NEON BLUE RING */
 .profile-ring::before {
   content: "";
   position: absolute;
@@ -1675,7 +1676,6 @@ a:hover { color: #67e8f9; }
   border-radius: 50%;
 
   background: conic-gradient(
-    from 0deg,
     #021526,
     #003cff,
     #00aaff,
@@ -1683,10 +1683,10 @@ a:hover { color: #67e8f9; }
     #021526
   );
 
-  /* thinner border */
+  /* thin border */
   padding: 4px;
 
-  /* creates hollow ring */
+  /* hollow ring effect */
   -webkit-mask:
     radial-gradient(
       farthest-side,
@@ -1701,10 +1701,7 @@ a:hover { color: #67e8f9; }
       black 0
     );
 
-  /* smooth rotation */
-  animation: rotateRing 6s linear infinite;
-
-  /* neon glow */
+  /* neon glow only */
   box-shadow:
     0 0 15px rgba(0, 120, 255, 0.45),
     0 0 35px rgba(0, 170, 255, 0.25),
