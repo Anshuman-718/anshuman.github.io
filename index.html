@@ -388,37 +388,40 @@
     environmental monitoring, and adaptive LED brightness control.
   </p>
 
-  <!-- HOME BANNER -->
-  <div class="modal-banner modal-banner--home">
-    <span>🏠</span>
-    <p>IoT · Bluetooth · Multi-Node Control</p>
+  <!-- SMART HOME IMAGE -->
+  <div class="smart-home-image-wrapper">
+    <img
+      src="assets/SmartHomeAutomation.png"
+      alt="Smart Home Automation"
+      class="smart-home-image"
+    >
   </div>
 
-<!-- PROJECT VIDEO -->
-<div class="project-video-wrapper">
+  <!-- VIDEO TITLE -->
+  <div class="video-title">
+    ▶ Smart Home Demo
+  </div>
 
-  <video
-    class="project-video"
-    controls
-    muted
-    playsinline
-    preload="metadata"
-    poster="assets/SmartHome.png"
-  >
-    <source
-      src="https://anshuman-718.github.io/anshuman.github.io/assets/smart-home-automation.mp4"
-      type="video/mp4"
+  <!-- PROJECT VIDEO -->
+  <div class="project-video-wrapper">
+
+    <video
+      class="project-video"
+      controls
+      muted
+      playsinline
+      preload="metadata"
+      poster="assets/SmartHomeAutomation.png"
     >
+      <source
+        src="https://anshuman-718.github.io/anshuman.github.io/assets/smart-home-automation.mp4"
+        type="video/mp4"
+      >
 
-    Your browser does not support HTML5 video.
-  </video>
+      Your browser does not support HTML5 video.
+    </video>
 
-  <!-- PLAY BUTTON -->
-  <button class="video-play-btn">
-    ▶ Play Demo
-  </button>
-
-</div>
+  </div>
 
   <ul class="modal-points">
     <li>Designed a smart home automation system using 3 Arduino UNO boards for distributed device control.</li>
@@ -437,16 +440,28 @@
   </a>
 
 </template>
-
   <template id="tpl-cozmoclench">
-    <p class="modal-desc">Designed and built a competition robot for the IIT Bombay Techfest event organized at IIT Gandhinagar, featuring a mechanical gripper mechanism for precise pick-and-place operations and object manipulation.</p>
-    <div class="modal-banner modal-banner--robot"><span>🤖</span><p>Techfest · Pick &amp; Place · Gripper Mechanism</p></div>
-    <ul class="modal-points">
-      <li>Designed and built a wired robotic system with a mechanical gripper mechanism.</li>
-      <li>Achieved controlled pick-and-place operations through precise motor actuation.</li>
-      <li>Competition-focused design for IIT Bombay Techfest at IIT Gandhinagar.</li>
-    </ul>
-  </template>
+
+  <p class="modal-desc">
+    Designed and built a competition robot for the IIT Bombay Techfest event organized at IIT Gandhinagar, featuring a mechanical gripper mechanism for precise pick-and-place operations and object manipulation.
+  </p>
+
+  <!-- ROBOT IMAGE -->
+  <div class="cozmo-image-wrapper">
+    <img 
+      src="assets/CozmoClench Bot.jpg"
+      alt="CozmoClench Robot"
+      class="cozmo-image"
+    >
+  </div>
+
+  <ul class="modal-points">
+    <li>Designed and built a wired robotic system with a mechanical gripper mechanism.</li>
+    <li>Achieved controlled pick-and-place operations through precise motor actuation.</li>
+    <li>Competition-focused design for IIT Bombay Techfest at IIT Gandhinagar.</li>
+  </ul>
+
+</template>
 
   <div class="lightbox" id="lightbox" hidden aria-hidden="true" role="dialog" aria-modal="true">
     <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
