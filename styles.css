@@ -1573,84 +1573,6 @@ a:hover { color: #67e8f9; }
   .reveal, .marquee-track, .aurora-blob { animation: none; transition: none; opacity: 1; transform: none; }
 }
 
-
-/* ===================================================
-   SMART HOME VIDEO SECTION
-=================================================== */
-.project-video-wrapper {
-  width: 100%;
-  margin: 1.5rem 0;
-
-  position: relative;   /* ADD THIS */
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-/* BADGE */
-.video-badge {
-  display: inline-flex;
-  align-items: center;
-
-  margin-bottom: 12px;
-
-  background: rgba(10,15,30,0.9);
-  color: #fff;
-
-  padding: 10px 18px;
-  border-radius: 999px;
-
-  font-size: 0.92rem;
-  font-weight: 600;
-
-  border: 1px solid rgba(0,170,255,0.25);
-
-  box-shadow:
-    0 0 15px rgba(0,170,255,0.15);
-}
-
-/* VIDEO */
-.project-video {
-  width: 100%;
-  display: block;
-
-  border-radius: 20px;
-  max-height: 420px;
-
-  object-fit: contain;
-  background: #000;
-
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
-/* ===================================================
-   PLAY BUTTON
-=================================================== */
-.video-play-btn {
-  position: absolute;
-  top: 18px;
-  left: 18px;
-
-  z-index: 9999;
-
-  background: rgba(10,15,30,0.82);
-  color: #fff;
-
-  border: 1px solid rgba(0,170,255,0.25);
-  border-radius: 999px;
-
-  padding: 10px 18px;
-
-  font-size: 0.9rem;
-  font-weight: 600;
-
-  backdrop-filter: blur(12px);
-
-  box-shadow:
-    0 0 12px rgba(0,170,255,0.15);
-
-  cursor: pointer; /* change from default */
-}
-
 /* ===================================================
    HERO LAYOUT (TEXT LEFT + PROFILE RIGHT)
 =================================================== */
@@ -1850,71 +1772,63 @@ a:hover { color: #67e8f9; }
 }
 
 /* ==========================================
-   VIDEO TITLE
+   ZOOMABLE IMAGE
 ========================================== */
-.video-title {
-  display: inline-block;
-
-  margin: 18px 0 12px;
-  padding: 10px 18px;
-
-  background: rgba(10,15,30,0.92);
-  color: white;
-
-  border-radius: 999px;
-  border: 1px solid rgba(0,170,255,0.25);
-
-  font-size: 0.92rem;
-  font-weight: 600;
+.zoomable-image {
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
 }
-/* ==========================================
-   VIDEO TITLE
-========================================== */
-.video-title {
-  display: inline-block;
 
-  margin: 18px 0 12px;
-  padding: 10px 18px;
+.zoomable-image:hover {
+  transform: scale(1.02);
+}
+
+/* ==========================================
+   LIGHTBOX IMAGE
+========================================== */
+#lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+/* ==========================================
+   VIDEO LINK BUTTON
+========================================== */
+.video-link-wrapper {
+  margin: 22px 0 18px;
+}
+
+/* BUTTON */
+.video-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 24px;
 
   background: rgba(10,15,30,0.92);
-  color: white;
+  color: #ffffff;
 
-  border-radius: 999px;
-  border: 1px solid rgba(0,170,255,0.25);
-
-  font-size: 0.92rem;
+  text-decoration: none;
+  font-size: 0.96rem;
   font-weight: 600;
+
+  border-radius: 14px;
+  border: 1px solid rgba(0,170,255,0.25);
 
   box-shadow:
-    0 0 12px rgba(0,170,255,0.12);
+    0 0 15px rgba(0,170,255,0.12);
+
+  transition: all 0.25s ease;
 }
 
-/* ==========================================
-   VIDEO SECTION
-========================================== */
-.project-video-wrapper {
-  width: 100%;
-  border-radius: 20px;
+/* HOVER */
+.video-link-btn:hover {
+  transform: translateY(-2px);
 
-  overflow: visible; /* changed */
+  border-color: rgba(0,170,255,0.45);
 
-  border: 1px solid rgba(255,255,255,0.08);
-
-  background: rgba(255,255,255,0.03);
-  padding: 10px;
-}
-
-/* VIDEO */
-.project-video {
-  width: 100%;
-  height: auto; /* important */
-
-  max-height: 500px; /* slightly bigger */
-
-  display: block;
-  background: #000;
-
-  border-radius: 16px;
-
-  object-fit: scale-down; /* better than contain */
+  box-shadow:
+    0 0 22px rgba(0,170,255,0.20);
 }
