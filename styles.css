@@ -1620,10 +1620,11 @@ a:hover { color: #67e8f9; }
 /* ===== HERO LAYOUT FIX (LEFT TEXT + RIGHT IMAGE) ===== */
 .hero-split {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* shift content upward */
   justify-content: space-between;
   gap: 3rem;
-  flex-wrap: wrap; /* keeps it responsive */
+  flex-wrap: wrap;
+  padding-top: 2rem;
 }
 
 /* LEFT TEXT stays untouched */
@@ -1634,11 +1635,14 @@ a:hover { color: #67e8f9; }
 
 /* RIGHT PROFILE AREA */
 .hero-profile {
-  flex: 1;
+  flex: 0.8;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-width: 280px;
+
+  /* move profile upward */
+  margin-top: -20px;
 }
 
 /* PROFILE CIRCLE */
@@ -1646,20 +1650,46 @@ a:hover { color: #67e8f9; }
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  padding: 6px;
+  padding: 3px; /* reduced border thickness */
+  position: relative;
 
-  background: conic-gradient(
-    from 180deg,
-    #7f5af0,
-    #2cb67d,
-    #00c2ff,
-    #7f5af0
-  );
-
-  box-shadow: 0 0 30px rgba(127, 90, 240, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* dark theme inside */
+  background: #111827; /* dark background matching portfolio */
+}
+
+/* ROTATING NEON RING */
+.profile-ring::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #00f5ff,
+    #7f5af0,
+    #2cb67d,
+    #00f5ff
+  );
+
+  /* thinner ring */
+  padding: 2px;
+
+  -webkit-mask:
+    radial-gradient(farthest-side,
+    transparent calc(100% - 3px),
+    black 0);
+
+  mask:
+    radial-gradient(farthest-side,
+    transparent calc(100% - 3px),
+    black 0);
+
+  animation: spinRing 5s linear infinite;
+  filter: blur(0.5px);
 }
 
 /* IMAGE */
@@ -1668,8 +1698,21 @@ a:hover { color: #67e8f9; }
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  position: relative;
+  z-index: 1;
 
-  border: 3px solid rgba(255, 255, 255, 0.15);
+  /* dark inner border */
+  border: 2px solid rgba(255,255,255,0.08);
+}
+
+/* ROTATION */
+@keyframes spinRing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* MOBILE FIX */
@@ -1677,9 +1720,15 @@ a:hover { color: #67e8f9; }
   .hero-split {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 
   .hero-profile {
-    margin-top: 2rem;
+    margin-top: 1rem;
+  }
+
+  .profile-ring {
+    width: 180px;
+    height: 180px;
   }
 }
