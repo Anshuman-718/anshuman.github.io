@@ -1644,11 +1644,12 @@ a:hover { color: #67e8f9; }
   min-width: 320px;
 
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 
-  /* shift upward */
-  margin-top: 90px;
+  /* MOVE IMAGE LOWER */
+  margin-top: 120px;
 }
 
 /* ===================================================
@@ -1666,46 +1667,22 @@ a:hover { color: #67e8f9; }
 }
 
 /* ===================================================
-   ROTATING DARK NEON BLUE RING
+   STATIC FADED NEON BLUE RING (NO ANIMATION)
 =================================================== */
-/* NORMAL DARK NEON BLUE RING */
 .profile-ring::before {
   content: "";
   position: absolute;
-  inset: -5px;
+  inset: -4px;
   border-radius: 50%;
 
-  background: conic-gradient(
-    #021526,
-    #003cff,
-    #00aaff,
-    #005eff,
-    #021526
-  );
+  /* soft faded blue ring */
+  border: 3px solid rgba(0, 170, 255, 0.45);
 
-  /* thin border */
-  padding: 4px;
-
-  /* hollow ring effect */
-  -webkit-mask:
-    radial-gradient(
-      farthest-side,
-      transparent calc(100% - 4px),
-      black 0
-    );
-
-  mask:
-    radial-gradient(
-      farthest-side,
-      transparent calc(100% - 4px),
-      black 0
-    );
-
-  /* neon glow only */
+  /* faded glow */
   box-shadow:
-    0 0 15px rgba(0, 120, 255, 0.45),
-    0 0 35px rgba(0, 170, 255, 0.25),
-    0 0 60px rgba(0, 80, 255, 0.15);
+    0 0 12px rgba(0, 170, 255, 0.18),
+    0 0 25px rgba(0, 120, 255, 0.12),
+    0 0 45px rgba(0, 80, 255, 0.08);
 
   z-index: 0;
 }
@@ -1722,21 +1699,27 @@ a:hover { color: #67e8f9; }
   position: relative;
   z-index: 2;
 
-  /* remove any inner background */
-  background: transparent;
   border: none;
+  background: transparent;
 }
 
 /* ===================================================
-   RING ROTATION ANIMATION
+   NAME BELOW PROFILE
 =================================================== */
-@keyframes rotateRing {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile-name {
+  margin-top: 18px;
+  margin-bottom: 0;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Syne", sans-serif;
+
+  color: #dbeafe;
+  text-align: center;
+  letter-spacing: 1px;
+
+  text-shadow:
+    0 0 8px rgba(0,170,255,0.18);
 }
 
 /* ===================================================
@@ -1763,35 +1746,4 @@ a:hover { color: #67e8f9; }
   .hero-profile {
     min-width: auto;
   }
-}
-
-/* PROFILE CONTAINER */
-.hero-profile {
-  flex: 0.8;
-  min-width: 320px;
-
-  display: flex;
-  flex-direction: column; /* stack image + name */
-  align-items: center;
-
-  margin-top: 20px;
-}
-
-/* NAME BELOW IMAGE */
-.profile-name {
-  margin-top: 15px;
-  margin-bottom: 0;
-
-  font-size: 1.5rem;
-  font-weight: 700;
-  font-family: "Syne", sans-serif;
-
-  color: #dbeafe;
-  text-align: center;
-
-  letter-spacing: 1px;
-
-  text-shadow:
-    0 0 8px rgba(0,170,255,0.3),
-    0 0 16px rgba(0,80,255,0.15);
 }
